@@ -37,7 +37,7 @@ jobs:
         run: |
           brew install swiftlint
       - name: Run bootstrap script
-        run: ./bootstrap.sh --ci
+        run: ./bootstrap.sh
       # - name: Run tests
       #   run: |
       #     set -o pipefail
