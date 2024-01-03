@@ -33,6 +33,9 @@ jobs:
           path: ~/.npm
           key: npm-${{ hashFiles('package-lock.json') }}
           restore-keys: npm-
+      - name: Install deps
+        run: |
+          brew install swiftlint
       - name: Run bootstrap script
         run: ./bootstrap.sh --ci
       - name: Run tests
