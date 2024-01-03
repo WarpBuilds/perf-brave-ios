@@ -22,6 +22,10 @@ jobs:
       - name: Select XCode
         # Use XCODE_VERSION env variable to set the XCode version you want.
         run: sudo xcode-select --switch /Applications/Xcode_${{ env.XCODE_VERSION }}.app
+      - name: Debug
+        run: |
+          echo "Showing system info"
+          system_profiler SPSoftwareDataType SPHardwareDataType
       - name: Checkout
         uses: actions/checkout@v3
       - name: Update node
